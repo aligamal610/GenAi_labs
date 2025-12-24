@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ِAloulo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+
+  <div class="app">
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo">MC</div>
+        <div class="brandText">
+          <div class="brandTitle">ِAloulo</div>
+          <div class="brandSub">Ali Gamal 2025</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="cardTitle">Provider</div>
+
+        <label class="lbl">Provider</label>
+        <select id="provider">
+          <option value="openai">OpenAI</option>
+          <option value="gemini">Gemini</option>
+        </select>
+
+        <label class="lbl">Mode</label>
+        <select id="mode">
+          <option value="text">Text (Chat)</option>
+          <option value="image">Image (Generate)</option>
+        </select>
+
+        <label class="lbl">Model</label>
+        <select id="model"></select>
+
+        <label class="lbl">Endpoint (Auto)</label>
+        <div id="endpointText" class="endpoint mono"></div>
+      </div>
+
+      <div class="card">
+        <div class="cardTitle">API Keys</div>
+
+        <div id="openaiKeyWrap">
+          <label class="lbl">OpenAI API Key</label>
+          <input id="openaiKey" type="password" placeholder="sk-..." autocomplete="off" />
+        </div>
+
+        <div id="geminiKeyWrap">
+          <label class="lbl">Gemini API Key</label>
+          <input id="geminiKey" type="password" placeholder="AIza..." autocomplete="off" />
+        </div>
+
+        <label class="check">
+          <input id="saveKeys" type="checkbox" />
+          <span>Save keys on this device (LocalStorage)</span>
+        </label>
+
+        <label class="lbl">System Instruction (optional, text mode)</label>
+        <textarea id="system" rows="3" placeholder="Example: You are a helpful assistant..."></textarea>
+
+        <div class="row gap">
+          <button id="resetChat" class="btn ghost">Reset chat</button>
+          <button id="testBtn" class="btn">Test</button>
+        </div>
+
+        <div class="note">
+          Tip: Enter to send • Shift+Enter for new line
+        </div>
+      </div>
+
+      <div class="tinyWarn">
+        ⚠️ Client-only demo: putting keys in the browser is unsafe for real apps.
+      </div>
+    </aside>
+
+    <!-- CHAT PANEL -->
+    <main class="chat">
+      <header class="topbar">
+        <div>
+          <div class="topTitle">Chat</div>
+          <div id="status" class="status">Ready</div>
+        </div>
+
+        <div class="row gap">
+          <button id="copyBtn" class="btn ghost">Copy</button>
+          <button id="clearBtn" class="btn ghost">Clear</button>
+        </div>
+      </header>
+
+      <section id="messages" class="messages" aria-live="polite"></section>
+
+      <footer class="composer">
+        <textarea id="input" rows="1" placeholder="Type your message..."></textarea>
+        <button id="sendBtn" class="btn send">Send</button>
+      </footer>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

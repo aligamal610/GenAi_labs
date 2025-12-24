@@ -1,0 +1,69 @@
+# =========================
+# Secrets / Env
+# =========================
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# =========================
+# Node.js
+# =========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.DS_Store
+Thumbs.db
+
+# build / cache
+dist/
+build/
+.cache/
+.tmp/
+temp/
+coverage/
+.nyc_output/
+
+# lockfiles (اختياري - لو عايز ترفع واحد بس، سيب اللي بتستخدمه)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# =========================
+# PHP
+# =========================
+vendor/
+composer.lock
+.phpunit.result.cache
+phpunit.xml
+phpstan.neon
+phpstan.neon.dist
+
+# =========================
+# Project generated files
+# =========================
+rag_index.json
+*.sqlite
+*.db
+uploads/
+output/
+logs/
+*.log
+
+# =========================
+# IDE / Editor
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+
+# =========================
+# OS
+# =========================
+.DS_Store
+Thumbs.db
