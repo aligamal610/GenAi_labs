@@ -1,0 +1,2 @@
+{"messages":[{"role":"user","content":"Say hi"},{"role":"assistant","content":"Hi there! 👋"}]}
+{"messages":[{"role":"user","content":"What is API in one sentence?"},{"role":"assistant","content":"An API is a way for software to communicate with other software."}]}
